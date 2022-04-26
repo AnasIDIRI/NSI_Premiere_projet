@@ -9,6 +9,10 @@ Il vous faut python3 et le package installer pip3. Une fois les deux installé, 
 
 ### GNU/Linux :
 
+```
+pip3 install termcolor && pip3 install datetime && git clone https://github.com/AnasIDIRI/NSI_Premiere_projet.git && cd NSI_Premiere_projet && chmod +x main.py && ./main.py
+```
+
 ![image](https://user-images.githubusercontent.com/104441075/165314201-675e6253-2824-4b6c-a48e-9f41cfddc907.png)
      
     
