@@ -54,7 +54,7 @@ def VoidAfficher(question, result ,reponse, var):
         
 
 
-# Affichons le texte informatif en 
+# Affichons le texte informatif 
 print("""
 Quizz de mathématiques 
 4 types de question peuvent vous être posé :
