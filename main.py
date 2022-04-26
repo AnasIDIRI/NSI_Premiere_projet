@@ -95,7 +95,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
         """
         Grâce au module polynome, on crée un polynome en s'assurant qu'il ai une/des réponse(s) dans R
-        On calcul son delat et sa/ses racine(s)
+        On calcul son discriminant et sa/ses racine(s)
         
         """
 
@@ -122,7 +122,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
             rcs = input("Entrez le/les racines : ")
         
             # On split la réponse pour (dans le cas ou il y a 2 racines) créer un tableau
-            # contenant les racines
+            # contenant chaque racines
 
             rcs = rcs.split()
 
@@ -149,7 +149,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
             
             if rcs[0] == result[0] and rcs[1] == result[1] or rcs[0] == result[1] and rcs[1] == result[0]: 
 
-            # On test bien toute le spossibilité : les racines doivent pouvoir être donné dans l'ordre que l'utilisateur souhaite 
+            # On test bien toutes les possibilités : les racines doivent pouvoir être donné dans l'ordre que l'utilisateur souhaite 
                 nbTrue+=1            
                 VoidAfficher(polynome.Afficher(polynom), result, False)
             
@@ -190,7 +190,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
         solution = affine.rs_affine(a,b) 
         affine_equ = f"{a}x {affine.afficher(b)}"
 
-        # Demande a l'utilisateur
+        # Demande à l'utilisateur
         
         print(f"Calculez la solution de : {affine_equ} = 0") 
         print("""utilisez des "." et non des "," \n""") 
@@ -215,15 +215,15 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
 
         if rs == "":
-            nbFalse += 1
+            nbFalse += 1 # Il n'a rien entré, c'est donc faux
             VoidAfficher(affine_equ, solution, rs, True) 
         
-        elif rs == solution:
+        elif rs == solution: # Il a entré la bonne réponse
             nbTrue+=1
             VoidAfficher(affine_equ, solution, rs, True)
             
         else:
-            nbFalse+=1
+            nbFalse+=1 # Il a entré la mauvaise réponse
             VoidAfficher(affine_equ, solution, rs, False)
 
         
@@ -234,6 +234,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
     elif question == 3:
 
+        # Générons une question, calculons sa réponse
         linéaire,question = lineaire.linéaireGen()
         rsp_linéaire = lineaire.Reponse(linéaire, question)
         equati = f"{linéaire}x = {question}"
@@ -244,6 +245,8 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
         get_int = False
         rep = "quelquechose"
+        
+        # Encore une fois nous nous assurons que l'utilisateur n'entre pas de chaine de caractère
         
         while get_int is False and rep != "":
 
@@ -276,11 +279,11 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
     elif question == 4:
 
-        # Generer une question
+        # Générer une question, sa réponse
         EquationCarré = carre.Generer()
         rsps = carre.Calculer(EquationCarré)
 
-        # Prompt user
+        # Prompt l'utilisateur
         print(f"Résoudre : x² = {EquationCarré} (arrondi au centième) ")
         print("""utilisez des "." et non des "," \n""") 
 
@@ -303,6 +306,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
                 print("Vous devez entrer un nombre !")
 
             
+        # comme d'habitude :    
             
         if rep_carré == "":    
             nbFalse += 1
@@ -324,7 +328,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
     clear()
 
 
-# Enregistrons l'heure actuelle 
+# Enregistrons l'heure actuelle, qui est l'heure à laquelle le quizz s'est terminé.
 fin = datetime.now()
 
 
@@ -334,9 +338,13 @@ nbTruesur20 = nbTrue * 2
 
 # Affichage
 
+# On utilise strftime pour n'afficher que les heures, que les minutes et que les secondes
+# afin d'obtenir un affichage semblable aux QCM du CNED
 print(f"""
 Commencé à     :   {debut.strftime("%H")}h {debut.strftime("%M")}m {debut.strftime("%S")}s
 État           :   Terminé
 Terminé à      :   {fin.strftime("%H")}h {fin.strftime("%M")}m {fin.strftime("%S")}s
 Note           :   {nbTruesur20} sur 20 ({nbTruesur20*5}%)
 """)
+
+# Fin
