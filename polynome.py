@@ -1,8 +1,6 @@
 from random import randint
 from math import sqrt
 
-
-
 def GenerationPolynome():
 
     """
@@ -19,18 +17,18 @@ def GenerationPolynome():
 
         """
         Cette boucle permet de génerer 3 nombres aléatoires entre -10 et 10 pour a, b et c 
-        il vérifie égakement que le polynome possède des solutions dans R. 
+        il vérifie également que le polynome possède des solutions dans R. 
         
         """
 
         for i in range(0,3):
-            polynome[i] = randint(-10,10) # Génération de 3 nombres
+            polynome[i] = randint(-10,10) # Génération des 3 nombres, qu'on place dans le tableau
 
 
         if CalculerDelta(polynome) >= 0 and ( polynome[0] > 0 or polynome[0] < 0 ) :
             u = True
         else:
-            u= False
+            u= False # On s'assure que le polynome à des solutions dans R et qu'il est calculable 
 
     return(polynome)
 
@@ -49,7 +47,7 @@ def CalculerDelta(polynome):
 def CalculerRacines(polynome): 
 
     """
-    Cette fonction verifie combien de solutions possède notre polynome
+    Cette fonction vérifie combien de solutions possède notre polynome
     et calcul ces dérnières : si le discrimnant > 0 il y a 2 solutions, sinon
     il n y en a qu'une. 
     
@@ -83,16 +81,16 @@ def Afficher(polynome):
     
     """
     
-    affichage = f"{polynome[0]}x²" # Tout d'abord on prends a et on place x² juste apres afin d'obtenir ax²
+    affichage = f"{polynome[0]}x²" # Tout d'abord on prends "a" et on place x² juste après afin d'obtenir ax²
         
     if polynome[1] >= 0:
-        affichage += f" + {polynome[1]}x" # Pour eviter un polynome de type 8x² 20x 5, nous ajoutons les "+" manuellement
+        affichage += f" + {polynome[1]}x" # Pour éviter un polynome de type 8x² 20x 5, nous ajoutons les "+" manuellement
     else:                                 
         affichage += f" {polynome[1]}x"   
                                           # SI notre nombre est positif : afficher +
     if polynome[2] >= 0:                  # SINON ne rien faire: le "-" sera afficher automatiquement
-        affichage += f" + {polynome[2]}"
-    else:
+        affichage += f" + {polynome[2]}"  # Autrement nous obtiendrions 2x² +- 1x +- 4
+    else:                                 #
         affichage += f" {polynome[2]}"
 
     return affichage
