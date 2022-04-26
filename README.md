@@ -2,8 +2,8 @@
 
 ## Installation
 
-Il vous faut python3 et l'utilitaire pip.
-Ensuite :
+Il vous faut python3 et l'utilitaire pip. Une fois les deux installé, rendez vous à la section qui traite de l'installation sur votre OS.
+
 
 GNU/Linux :
 
