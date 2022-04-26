@@ -2,14 +2,13 @@
 
 ## Installation
 
-Ouvrez une ligne de commande et installeé les dépendances avec pip3:
+Ouvrez une ligne de commande et installez les dépendances avec pip3:
 
 ```
 pip3 install termcolor && pip3 install datetime
-
 ```
 
-clonez le repo, déplacez vous-y en en ligne de command et lancer main.py
+clonez le repo, déplacez vous-y et lancez main.py
 
 ```
 python3 main.py
