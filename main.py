@@ -54,8 +54,8 @@ def VoidAfficher(question, result ,reponse, var):
         
 
 
-# Affichons le texte informatif en jaune
-print(colored("""
+# Affichons le texte informatif en 
+print("""
 Quizz de mathématiques 
 4 types de question peuvent vous être posé :
 
@@ -64,7 +64,7 @@ Quizz de mathématiques
     3  :  linéaire
     4  :  fonction carré
 
-Bonne chance !\r\n""", "yellow"))
+Bonne chance !\r\n""")
 
 input("Pour continuer, tapez entrer ...")
 
