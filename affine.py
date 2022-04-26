@@ -4,7 +4,7 @@ def générer_affine():
 
     """
     
-    Cette fonction permet de generer une fonction affine 
+    Cette fonction permet de générer une fonction affine 
 
     """
 
@@ -44,7 +44,7 @@ def afficher(b):
     
     Fonction qui permet l'affichage de la fonction 
     
-    elle sert a éviter d'obtenir quelque chose comme 
+    elle sert à éviter d'obtenir quelque chose comme 
     
     2x + -5
     ou
