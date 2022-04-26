@@ -53,7 +53,6 @@ def VoidAfficher(question, result ,reponse, var):
         
         
 
-clear()
 
 # Affichons le texte informatif en jaune
 print(colored("""
@@ -142,7 +141,7 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
             # Si l'utilisateur n'entre rien, c'est faux
             
             nbFalse += 1
-            VoidAfficher(polynome.Afficher(polynom), reponse, rcs, False)
+            VoidAfficher(polynome.Afficher(polynom), result, rcs, False)
   
 
 
@@ -152,21 +151,21 @@ for i in range(0,10): # Il y aura 10 questions dans le quizz, donc une boule all
 
             # On test bien toute le spossibilité : les racines doivent pouvoir être donné dans l'ordre que l'utilisateur souhaite 
                 nbTrue+=1            
-                VoidAfficher(polynome.Afficher(polynom), reponse, False)
+                VoidAfficher(polynome.Afficher(polynom), result, False)
             
             else:
                 # Il y a 2 racines, l'utilisateur en a donné 2 mais elles sont fausses
                 nbFalse+=1
-                VoidAfficher(polynome.Afficher(polynom), reponse, False)
+                VoidAfficher(polynome.Afficher(polynom), result, False)
 
         elif len(result)==1 and len(rcs)==1: # Il y a 1 racine, l'utilisateur en a donné 1
 
                 if result[0] == rcs[0]:
                     nbTrue += 1
-                    VoidAfficher(polynome.Afficher(polynom), reponse, rcs, True)
+                    VoidAfficher(polynome.Afficher(polynom), result, rcs, True)
                 else:
                     nbFalse += 1
-                    VoidAfficher(polynome.Afficher(polynom), reponse, rcs, False)
+                    VoidAfficher(polynome.Afficher(polynom), result, rcs, False)
 
         else:
             # Trop/Pas assez de racines donnée par l'utilisateur, c'est donc faux
