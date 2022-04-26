@@ -5,7 +5,7 @@
 Il vous faut python3 et l'utilitaire pip. Une fois les deux installé, rendez vous à la section qui traite de l'installation sur votre OS.
 
 <a href="https://github.com/AnasIDIRI/NSI_Premiere_projet#gnulinux-">GNU / Linux</a>      
-<a href="https://github.com/AnasIDIRI/NSI_Premiere_projet#windows-"Windows</a>
+<a href="https://github.com/AnasIDIRI/NSI_Premiere_projet#windows-">Windows</a>
 
 ### GNU/Linux :
 
