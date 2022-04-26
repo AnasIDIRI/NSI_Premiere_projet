@@ -2,7 +2,7 @@
 
 ## Installation
 
-Il vous faut python3 et le package installer pip3. Une fois les deux installé, rendez-vous à la section appropriée :
+Il vous faut python3 et le package installer pip3. Rendez-vous ensuite à la section appropriée :
 
 - <a href="https://github.com/AnasIDIRI/NSI_Premiere_projet#gnulinux-">GNU/Linux systems</a>      
 - <a href="https://github.com/AnasIDIRI/NSI_Premiere_projet#windows-">Windows systems</a>
