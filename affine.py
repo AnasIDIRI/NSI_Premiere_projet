@@ -13,8 +13,8 @@ def générer_affine():
     a=randint(-10,10)
     b=randint(-10,10)
     
-    # Ensuite on créer une boucle de gestion d'erreur , en effet si a=0 lors de la résolution
-    # de l'équation nous serons forcer de faire une division par zéro.
+    # Ensuite on crée une boucle de gestion d'erreur : en effet si a=0 lors de la résolution
+    # de l'équation nous serons forcé de faire une division par zéro !
 
     while a==0:
         a=randint(0,10)
@@ -32,7 +32,7 @@ def rs_affine(a,b):
     
     """
 
-    x = -b/a
+    x = -b/a # On utilise la formule appropriée
     x = round(x, 2) # Encore une fois, on arrondit au centième près
 
     return x
