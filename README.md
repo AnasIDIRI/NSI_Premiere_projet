@@ -23,7 +23,8 @@ cd NSI_Premiere_projet && chmod +x main.py
 
 ![image](https://user-images.githubusercontent.com/104441075/165314252-053f8937-a22c-4536-99d2-faab13c767d8.png)    
 Cliquez sur download zip
-
+     
+**Ouvrez le powershell**
 ```
 cd {dossier de telechargement}
 tar xf NSI_Premiere_projet.zip
@@ -32,6 +33,5 @@ pip3 install termcolor ; pip3 install datetime
 python main.py
 ```
 
-Tapez sur les touches windows+R, entrez "powershell" puis tapez sur la touche entrer
 ![image](https://user-images.githubusercontent.com/104441075/165317678-69775160-7224-4331-b461-8b72ad6e7324.png)
 
